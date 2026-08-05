@@ -278,7 +278,7 @@ section.block + section.block {
   position: fixed;
   inset: 0;
   z-index: 9999;
-  background: #0a0a0c;
+  background: linear-gradient(160deg, var(--color-blue-deep) 0%, var(--color-blue) 100%);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -308,7 +308,7 @@ section.block + section.block {
   margin-top: .6rem;
   font-size: .78rem;
   font-weight: 500;
-  color: #9aa0b4;
+  color: rgba(255,255,255,0.78);
   letter-spacing: 0.12em;
 }
 
@@ -992,25 +992,115 @@ section.block + section.block {
 .toast .material-symbols-outlined { color: #7ee0ac; font-size: 18px; }
 
 /* ------------------------------------------------------------
-   フッター
+   フッター（4カラム／ダーク）
    ------------------------------------------------------------ */
 .site-footer {
-  border-top: 1px solid var(--color-border-soft);
-  padding: 2.5rem 0 5rem;
+  background: var(--color-ink);
+  color: rgba(255,255,255,0.72);
   margin-top: 2rem;
+  padding-top: 3.5rem;
 }
-.site-footer .foot-title { font-weight: 800; margin-bottom: 0.5rem; }
-.site-footer .foot-sub { color: var(--color-text-sub); font-size: 0.85rem; margin-bottom: 1.25rem; }
-.footer-links {
+.site-footer .wrap { max-width: 1000px; }
+.footer-grid {
+  display: grid;
+  gap: 2.25rem;
+  grid-template-columns: 1fr;
+  padding-bottom: 2.5rem;
+  border-bottom: 1px solid rgba(255,255,255,0.14);
+}
+@media (min-width: 720px) {
+  .footer-grid { grid-template-columns: 1.4fr 1fr 1fr 1fr; }
+}
+.footer-col .foot-title { font-weight: 800; color: #ffffff; margin-bottom: 0.6rem; font-size: 1rem; }
+.footer-col .foot-sub { color: rgba(255,255,255,0.65); font-size: 0.85rem; line-height: 1.8; margin-bottom: 0.75rem; }
+.footer-col .foot-credit { color: rgba(255,255,255,0.55); font-size: 0.8rem; }
+.footer-col h4 {
+  color: #ffffff;
+  font-size: 0.85rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  margin-bottom: 1rem;
+}
+.footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 0.65rem; }
+.footer-col a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.85rem;
+  color: rgba(255,255,255,0.72);
+  min-height: 32px;
+}
+.footer-col a:hover { color: #ffffff; }
+.footer-col a .material-symbols-outlined { font-size: 17px; color: rgba(255,255,255,0.55); }
+.footer-col li { font-size: 0.85rem; color: rgba(255,255,255,0.65); }
+.footer-bottom {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.5rem 1.25rem;
-  font-size: 0.85rem;
-  font-weight: 700;
-  color: var(--color-text-sub);
-  margin-bottom: 1.5rem;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 1.5rem 0;
+  font-size: 0.78rem;
+  color: rgba(255,255,255,0.5);
 }
-.footer-copy { font-size: 0.78rem; color: var(--color-text-faint); }
+.footer-disclaimer {
+  border-top: 1px solid rgba(255,255,255,0.14);
+  padding: 1.25rem 0 5rem;
+  font-size: 0.74rem;
+  line-height: 1.85;
+  color: rgba(255,255,255,0.42);
+}
+
+/* ------------------------------------------------------------
+   注記（小さな補足文）
+   ------------------------------------------------------------ */
+.footnote-note {
+  font-size: 0.78rem;
+  color: var(--color-text-faint);
+  margin-top: 0.9rem;
+}
+
+/* ------------------------------------------------------------
+   比較テーブル（どのAIを使えばよい？）
+   ------------------------------------------------------------ */
+.compare-table-wrap {
+  overflow-x: auto;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: #ffffff;
+}
+.compare-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  min-width: 480px;
+}
+.compare-table th, .compare-table td {
+  padding: 0.95rem 1.25rem;
+  text-align: left;
+  font-size: 0.88rem;
+  line-height: 1.6;
+}
+.compare-table thead th {
+  background: var(--color-panel-bg);
+  font-weight: 800;
+  color: var(--color-text-sub);
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.compare-table tbody tr + tr td { border-top: 1px solid var(--color-border-soft); }
+.tool-pill {
+  display: inline-flex;
+  align-items: center;
+  background: linear-gradient(90deg, #eef2ff 0%, #f3eafe 100%);
+  color: var(--color-blue-deep);
+  font-weight: 700;
+  font-size: 0.82rem;
+  padding: 0.4rem 0.9rem;
+  border-radius: var(--radius-full);
+  white-space: nowrap;
+}
 
 /* 印刷対応 */
 @media print {
