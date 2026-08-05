@@ -1073,14 +1073,16 @@ section.block + section.block {
   width: 100%;
   border-collapse: separate;
   border-spacing: 0;
-  min-width: 480px;
+  min-width: 640px;
 }
 .compare-table th, .compare-table td {
   padding: 0.95rem 1.25rem;
   text-align: left;
   font-size: 0.88rem;
   line-height: 1.6;
+  vertical-align: top;
 }
+.compare-table td strong { font-size: 0.92rem; white-space: nowrap; }
 .compare-table thead th {
   background: var(--color-panel-bg);
   font-weight: 800;
