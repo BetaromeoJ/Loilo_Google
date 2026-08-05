@@ -54,7 +54,7 @@
     <div class="wrap">
       <span class="course-num-badge"><span class="material-symbols-outlined" aria-hidden="true">play_circle</span>Basic Operation</span>
       <h1>基礎操作</h1>
-      <p class="section-lead" style="margin-top:1rem;">iPadの録音・共有から、Gemini・Gemini Notebook・Canvaの基本操作までを、手順でまとめています。セッション本編では各STEPの内容に集中し、基本操作で困ったときはこのページを確認してください。</p>
+      <p class="section-lead" style="margin-top:1rem;">録音・共有から、Gemini・Gemini Notebook・Canvaの基本操作までを、手順でまとめています。セッション本編では各STEPの内容に集中し、基本操作で困ったときはこのページを確認してください。</p>
     </div>
   </section>
 
@@ -64,25 +64,36 @@
 
         <!-- 基礎操作カード1 -->
         <div class="card">
-          <h3 style="font-size:1.05rem;font-weight:800;margin-bottom:0.5rem;display:flex;align-items:center;gap:0.5rem;"><span class="material-symbols-outlined" aria-hidden="true">mic</span>iPadのボイスメモで録音する</h3>
-          <p style="color:var(--color-text-sub);font-size:0.9rem;margin-bottom:1rem;">「ボイスメモ」アプリを使って音声を録音する基本操作です。</p>
+          <h3 style="font-size:1.05rem;font-weight:800;margin-bottom:0.5rem;display:flex;align-items:center;gap:0.5rem;"><span class="material-symbols-outlined" aria-hidden="true">mic</span>録音する</h3>
+          <p style="color:var(--color-text-sub);font-size:0.9rem;margin-bottom:0.75rem;">端末の録音アプリを使って音声を録音する基本操作です。</p>
+          <ul style="list-style:none;display:flex;flex-direction:column;gap:0.35rem;margin-bottom:1rem;font-size:0.86rem;color:var(--color-text);">
+            <li><strong>iPhone・iPad：</strong>ボイスメモ</li>
+            <li><strong>Windows機：</strong>サウンドレコーダー</li>
+            <li><strong>Google Pixel：</strong>Googleレコーダー</li>
+          </ul>
           <ol class="step-list">
-            <li class="step-item"><div class="step-num">1</div><div class="step-body"><p>「ボイスメモ」アプリを開く</p></div></li>
-            <li class="step-item"><div class="step-num">2</div><div class="step-body"><p>赤い録音ボタンをタップして録音を開始する</p></div></li>
-            <li class="step-item"><div class="step-num">3</div><div class="step-body"><p>録音が終わったら停止ボタンをタップする</p></div></li>
-            <li class="step-item"><div class="step-num">4</div><div class="step-body"><p>タイトルをタップして分かりやすい名前に変更する</p></div></li>
+            <li class="step-item"><div class="step-num">1</div><div class="step-body"><p>端末の録音アプリを開く</p></div></li>
+            <li class="step-item"><div class="step-num">2</div><div class="step-body"><p>録音ボタンをタップ（Windows機はクリック）して録音を開始する</p></div></li>
+            <li class="step-item"><div class="step-num">3</div><div class="step-body"><p>録音が終わったら停止ボタンをタップ（クリック）する</p></div></li>
+            <li class="step-item"><div class="step-num">4</div><div class="step-body"><p>分かりやすい名前に変更して保存する</p></div></li>
           </ol>
         </div>
 
         <!-- 基礎操作カード2 -->
         <div class="card">
-          <h3 style="font-size:1.05rem;font-weight:800;margin-bottom:0.5rem;display:flex;align-items:center;gap:0.5rem;"><span class="material-symbols-outlined" aria-hidden="true">ios_share</span>音声ファイルを共有する</h3>
-          <p style="color:var(--color-text-sub);font-size:0.9rem;margin-bottom:1rem;">録音した音声を、共有メニューからそのままGeminiやGemini Notebookへ送る操作です。「ファイル」アプリに保存しておく必要はありません。</p>
+          <h3 style="font-size:1.05rem;font-weight:800;margin-bottom:0.5rem;display:flex;align-items:center;gap:0.5rem;"><span class="material-symbols-outlined" aria-hidden="true">upload_file</span>音声データをGeminiに渡す</h3>
+          <p style="color:var(--color-text-sub);font-size:0.9rem;margin-bottom:1rem;">録音した音声データを、そのままGeminiやGemini Notebookへ渡す操作です。端末によって方法が異なります。</p>
+          <p style="font-weight:800;font-size:0.85rem;margin-bottom:0.5rem;">iPhone・iPadの場合</p>
           <ol class="step-list">
             <li class="step-item"><div class="step-num">1</div><div class="step-body"><p>ボイスメモの一覧から共有したい録音を選ぶ</p></div></li>
             <li class="step-item"><div class="step-num">2</div><div class="step-body"><p>共有ボタン（四角に上矢印のアイコン）をタップする</p></div></li>
             <li class="step-item"><div class="step-num">3</div><div class="step-body"><p>共有先の一覧からGemini（またはGemini Notebook）を選ぶ</p></div></li>
-            <li class="step-item"><div class="step-num">4</div><div class="step-body"><p>アプリが開き、音声が添付されていることを確認する</p></div></li>
+          </ol>
+          <p style="font-weight:800;font-size:0.85rem;margin:1.1rem 0 0.5rem;">Windows機の場合</p>
+          <ol class="step-list">
+            <li class="step-item"><div class="step-num">1</div><div class="step-body"><p>サウンドレコーダーで録音した音声データは、ドキュメントフォルダに保存される</p></div></li>
+            <li class="step-item"><div class="step-num">2</div><div class="step-body"><p>Gemini（またはGemini Notebook）をブラウザで開く</p></div></li>
+            <li class="step-item"><div class="step-num">3</div><div class="step-body"><p>ドキュメントフォルダの音声データを、画面にドラッグ＆ドロップする</p></div></li>
           </ol>
         </div>
 
