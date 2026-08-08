@@ -74,6 +74,7 @@
         <li><a href="#prep">録音前の工夫：イニシャルトーク</a></li>
         <li><a href="#flow">基本の流れ</a></li>
         <li><a href="#steps">操作手順</a></li>
+        <li><a href="#exercise">デモ音声で演習する</a></li>
         <li><a href="#prompts">コピー用プロンプト</a></li>
         <li><a href="#example">実践例</a></li>
         <li><a href="#caution">注意点</a></li>
@@ -194,6 +195,126 @@
           </li>
         </ol>
       </div>
+    </div>
+  </section>
+
+  <section id="exercise" class="block">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="badge badge-solid">Exercise</p>
+        <h2 class="section-title">🎙️ STEP2｜デモ音声をAIに読み込ませてみよう</h2>
+        <p class="section-lead">ここからは、実際の音声データを使って演習します。今回は、個人情報を含まない研修用の「デモ音声」を使用します。iPhoneなどで録音した音声をGeminiやGemini Notebookに読み込ませることで、文字起こし、会議録の作成、要約、重要事項の抽出、報告文への変換などができます。まずは下のボタンまたは2次元コードから、デモ音声を開いてください。</p>
+      </div>
+
+      <!-- デモ音声へのアクセス -->
+      <div class="card" style="text-align:center;padding:2rem 1.5rem;">
+        <a href="https://drive.google.com/file/d/1SA3BvDyyf7jepwEgcusywnzJGu5wHr9W/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="font-size:1.05rem;padding:1rem 2.2rem;">🎧 デモ音声を開く<span class="material-symbols-outlined" aria-hidden="true">open_in_new</span></a>
+        <div style="margin-top:1.75rem;display:flex;flex-direction:column;align-items:center;gap:0.75rem;">
+          <img src="../assets/images/step2-demo-audio-qr.png" alt="デモ音声を開くための2次元コード" style="width:160px;height:160px;border-radius:var(--radius-sm);border:1px solid var(--color-border);">
+          <p style="font-size:0.85rem;color:var(--color-text-sub);max-width:320px;">スマートフォン・タブレットから参加している方は、2次元コードから開くこともできます。</p>
+        </div>
+      </div>
+
+      <!-- 操作手順 -->
+      <div class="card" style="margin-top:1.25rem;">
+        <ol class="step-list">
+          <li class="step-item">
+            <div class="step-num">1</div>
+            <div class="step-body"><h4>デモ音声を開く</h4><p>「🎧 デモ音声を開く」ボタン、または2次元コードからGoogleドライブを開きます。</p></div>
+          </li>
+          <li class="step-item">
+            <div class="step-num">2</div>
+            <div class="step-body"><h4>音声ファイルを端末に保存する</h4><p>Googleドライブ上の音声を、使用している端末にダウンロードしてください。共有元の音声は「閲覧者」権限のため、元データを変更することはありません。</p></div>
+          </li>
+          <li class="step-item">
+            <div class="step-num">3</div>
+            <div class="step-body"><h4>Geminiを開く</h4><p>Geminiを起動します。</p></div>
+          </li>
+          <li class="step-item">
+            <div class="step-num">4</div>
+            <div class="step-body"><h4>音声ファイルを追加する</h4><p>「＋」やファイル追加の操作から、先ほど保存したデモ音声を添付します。</p></div>
+          </li>
+          <li class="step-item">
+            <div class="step-num">5</div>
+            <div class="step-body"><h4>プロンプトを入力する</h4><p>音声を添付したあと、下の演習用プロンプトを入力します。</p></div>
+          </li>
+          <li class="step-item">
+            <div class="step-num">6</div>
+            <div class="step-body"><h4>AIの出力を確認する</h4><p>文字起こし、会議録、要約などがどのように生成されるか確認します。</p></div>
+          </li>
+        </ol>
+      </div>
+
+      <!-- Gemini Notebookで行う場合 -->
+      <div class="tip-card" style="margin-top:1.25rem;">
+        <span class="material-symbols-outlined" aria-hidden="true">folder_special</span>
+        <p><strong>Gemini Notebookを利用する場合</strong>も、基本的な流れは同じです。デモ音声を各自の端末またはGoogleドライブに保存したあと、Gemini Notebookのソースとして追加してください。※利用しているGoogle Workspace環境やアカウントの設定によって、追加できるファイル形式や操作方法が異なる場合があります。</p>
+      </div>
+
+      <!-- 演習用プロンプト -->
+      <div class="prompt-card" style="margin-top:1.25rem;">
+        <div class="prompt-card-head">
+          <div>
+            <h4>まずはこれを試してみよう</h4>
+            <p class="prompt-scene">デモ音声を添付したあと、このプロンプトを送信してください。</p>
+          </div>
+          <button type="button" class="copy-btn" data-copy-target="#prompt2-4">
+            <span class="material-symbols-outlined" aria-hidden="true">content_copy</span>
+            <span class="copy-label">コピー</span>
+          </button>
+        </div>
+        <div class="prompt-body" id="prompt2-4">添付した音声データの内容を文字起こししてください。
+
+そのうえで、以下の形式で会議録を作成してください。
+
+・会議の概要
+・主な話題
+・決定したこと
+・今後対応すること
+・重要な発言や確認事項
+
+音声が聞き取れない部分については、内容を推測せず、
+「聞き取り不明」としてください。
+
+音声データに含まれていない情報を補完したり、創作したりしないでください。</div>
+      </div>
+
+      <!-- さらに試してみよう -->
+      <div class="tip-card" style="margin-top:1.25rem;">
+        <span class="material-symbols-outlined" aria-hidden="true">lightbulb</span>
+        <div>
+          <p style="font-weight:800;margin-bottom:0.5rem;">💡 AIへの指示を変えると、出力も変わる</p>
+          <p>同じ音声でも、プロンプトを変えることでさまざまな文書に変換できます。</p>
+          <ul>
+            <li>「3行で要約してください」</li>
+            <li>「箇条書きで整理してください」</li>
+            <li>「職員向けの報告文にしてください」</li>
+            <li>「保護者に伝える文章にしてください」</li>
+            <li>「ToDoだけ抜き出してください」</li>
+            <li>「発言者ごとに整理してください」</li>
+          </ul>
+          <p>「AIに何を作らせるか」を具体的に指示することがポイントです。</p>
+        </div>
+      </div>
+
+      <!-- 重要な注意事項 -->
+      <div class="tip-card" style="margin-top:1.25rem;">
+        <span class="material-symbols-outlined" aria-hidden="true">lock</span>
+        <div>
+          <p style="font-weight:800;margin-bottom:0.5rem;">🔐 実際の学校現場で使うときは</p>
+          <p>今回使用する音声は、研修用に作成したデモ音声です。実際の児童生徒・保護者・教職員との面談や会議の音声をAIに読み込ませる場合は、次を必ず確認してください。</p>
+          <ul>
+            <li>個人情報が含まれていないか</li>
+            <li>録音の目的は明確か</li>
+            <li>AIへのアップロードが学校・自治体で認められているか</li>
+            <li>使用するアカウントが適切か</li>
+            <li>録音データをどのように保存・削除するか</li>
+          </ul>
+          <p style="font-weight:700;">「録音できること」と「AIにアップロードしてよいこと」は別です。</p>
+          <p>所属する学校・自治体のルールに従って活用してください。詳しくは<a href="06-safety.html#recording-ai-guide" style="color:var(--color-blue-deep);font-weight:700;">STEP6「音声録音・AI活用の前に確認しておきたいこと」</a>もご確認ください。</p>
+        </div>
+      </div>
+
     </div>
   </section>
 
